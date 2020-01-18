@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <title>قرعه کشی آنلاین باشگاه تخفیفان - برندگان قرعه کشی</title>
+    <link rel="stylesheet" type="text/css" href="css/result.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/wall.css">
+</head>
+<body>
+<div id="main" class="wall">
+    <div class="result-title">☺️ برندگان قرعه کشی</div>
+    <div class="result-list" v-for="result in results">
+        <div v-for="item in result">
+            {{item}}
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript">
+    new Vue({
+        el: '#main',
+        data: {
+            results: []
+        },
+        mounted () {
+            let vm = this
+            let locals = window.localStorage
+            let str_results = []
+            for(let i = 0; i<localStorage.length; i++){
+                if (localStorage.key(i) !== 'choosed') {
+                    str_results.push(localStorage.getItem(localStorage.key(i)))
+                }
+            }
+            let results = []
+            for(let nameList of str_results) {
+                let temp = JSON.parse(nameList)
+                temp = temp.map(item => {return item.replace('<br/>', ' ')})
+                results.push(temp)
+            }
+            results = results.sort((x, y) => { return x.length - y.length;})
+            this.results = results
+        },
+    })
+</script>
+</body>
+</html>

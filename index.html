@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <title>قرعه کشی آنلاین باشگاه تخفیفان</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/wall.css">
+</head>
+<body>
+<div id="main" class="wall">
+    <div class="result-btn">
+       <a href="./result.html" target="_blank" style="color: white;font-size: 25px;text-decoration: none;">نتایج</a>
+    </div>
+</div>
+<div>
+<div id="result" class="result"></div>
+<div id="tools" class="tools">
+     <button v-for="value in btns"@click="onClick(value)"class="pure-button":class="{ 'button-error': selected == value}">{{value}}</button>
+    <button class="pure-button"@click="toggle":class="{'button-secondary': !running,'button-success': running}" onclick="canvas();">{{running?'وایسا':'شروع'}}</button>
+    <button class="pure-button button-warning" @click="reset">ریست</button>
+</div>
+<script type="text/javascript" src="js/zepto.js"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/tagcanvas.js"></script>
+<script type="text/javascript" src="js/member.js"></script>
+<script type="text/javascript" src="js/result.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

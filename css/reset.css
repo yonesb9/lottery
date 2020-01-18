@@ -1,0 +1,56 @@
+@font-face {
+    font-family: "iransans" !important;
+    src: local("/css/iransans-web.ttf") !important;
+  }
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  font-family: "iransans" !important;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre,
+form, fieldset, input, textarea, p, blockquote, th, td {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-family: "iransans" !important;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset, img {
+    border: 0;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-weight: normal;
+    font-style: normal;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+caption, th {
+    text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6, i {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 100%;
+}
+
+
+body {
+    font-family: "iransans" !important;
+    color: #333;
+    line-height: 22px;
+    font-size: 16px;
+}
